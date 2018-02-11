@@ -26,11 +26,11 @@ npm run bundle
 > bench@0.1.0 bundle /Users/hongbozhang/git/bench
 > rollup -c && java -jar node_modules/google-closure-compiler/compiler.jar --compilation_level SIMPLE  --language_out=ES5 src/bundle.js --js_output_file src/bundle.closure.js && gzip -9 -k src/bundle.closure.js && webpack -p src/jsdemo.js src/jsdemo.pack.js && gzip -9 -k src/jsdemo.pack.js && ls -al src/*.gz
 
--rw-r--r--  1 hongbozhang  staff    576 Feb 11 15:25 src/bundle.closure.js.gz
+-rw-r--r--  1 hongbozhang  staff    522 Feb 11 15:25 src/bundle.closure.js.gz
 -rw-r--r--  1 hongbozhang  staff  15856 Feb 11 15:25 src/jsdemo.pack.js.gz
 ```
 
-Note the bucklescript shaked output is 576 bytes gzipped, while webpack production build for immutablejs is 15_856 bytes, 
+Note the bucklescript shaked output is 522 bytes gzipped, while webpack production build for immutablejs is 15_856 bytes, 
 please let me know if you have better way to bundle such JS code.
 
 ## Performance

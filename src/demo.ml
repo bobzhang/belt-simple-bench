@@ -2,7 +2,7 @@
 [@@@bs.config no_export ]
 module M = Belt.Map.Int
 let check b = 
-  if not b then Js.Exn.raiseError __LOC__
+  if not b then Js.Exn.raiseError "impossible"
 
 
 let test () =

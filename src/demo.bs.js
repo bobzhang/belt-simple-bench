@@ -7,7 +7,7 @@ function check(b) {
   if (b) {
     return 0;
   } else {
-    throw new Error("File \"/Users/hongbozhang/git/bench/src/demo.ml\", line 5, characters 34-41");
+    throw new Error("impossible");
   }
 }
 
