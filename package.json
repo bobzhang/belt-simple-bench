@@ -1,0 +1,23 @@
+{
+  "name": "bench",
+  "version": "0.1.0",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "bundle": "rollup -c && java -jar node_modules/google-closure-compiler/compiler.jar --compilation_level SIMPLE  --language_out=ES5 src/bundle.js --js_output_file src/bundle.closure.js && gzip -9 -k src/bundle.closure.js && webpack -p src/jsdemo.js src/jsdemo.pack.js && gzip -9 -k src/jsdemo.pack.js && ls -al src/*.gz",
+    "bench": "node src/bundle.closure.js && node src/jsdemo.pack.js"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^2.1.1",
+    "google-closure-compiler": "^20180204.0.0",
+    "immutable": "^3.8.2",
+    "rollup": "^0.55.5",
+    "webpack": "^3.11.0"
+  }
+}
