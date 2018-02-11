@@ -30,7 +30,7 @@ npm run bundle
 -rw-r--r--  1 hongbozhang  staff  15856 Feb 11 15:25 src/jsdemo.pack.js.gz
 ```
 
-Note the bucklescript shaked output is 576 bytes gzipped, while webpack production build is 15_856 bytes, 
+Note the bucklescript shaked output is 576 bytes gzipped, while webpack production build for immutablejs is 15_856 bytes, 
 please let me know if you have better way to bundle such JS code.
 
 ## Performance
