@@ -5,7 +5,7 @@ var Map = Immutable.Map;
 var m = new Map();
 function check(b){
     if(!b){
-        throw new Errror ("impossible")
+        throw new Error ("impossible")
     }
 }
 function test() {
